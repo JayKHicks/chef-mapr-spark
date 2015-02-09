@@ -1,9 +1,6 @@
 mapr_spark_installation  Cookbook
 ====================================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook installs the MapR Spark packages, and will integrate spark master and spark history server with the mapr warden if appropriate.
 
 Requirements
 ------------
