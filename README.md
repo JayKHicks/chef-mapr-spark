@@ -1,9 +1,11 @@
 mapr_spark_installation  Cookbook
 ====================================
+
 This cookbook installs the MapR Spark packages, and will integrate spark master and spark history server with the mapr warden if appropriate.
 
 Requirements
 ------------
+
 This cookbook requires the mapr_installation cookbook, located at https://github.com/GannettDigital/chef-mapr. 
 
 Additionally, this cookbook a running MapR cluster, and assumes that the user used the mapr_installation cookbook to install the MapR cluster, and uses attributes from this cookbook to configure Spark.  If a different method was utilized, this cookbook *may* work as long as the attributes from mapr_installation are correct.
@@ -12,7 +14,7 @@ Additionally, this cookbook a running MapR cluster, and assumes that the user us
 Attributes
 ----------
 
-# The below specifies whether spark is standalone or uses yarn.  Acceptable values are 'yarn' and 'standalone'
+The below specifies whether spark is standalone or uses yarn.  Acceptable values are 'yarn' and 'standalone'
 
 ```ruby
 default[:mapr][:spark_type] = "yarn"
@@ -20,13 +22,13 @@ default[:mapr][:spark_type] = "yarn"
 
 #NOTE: The below all REQUIRE FQDN's for their entries
 
-# Acceptable values are "yes" and "no".  If "yes", installs spark workers on all nodes in the cluster
+Acceptable values are "yes" and "no".  If "yes", installs spark workers on all nodes in the cluster
 
 ```ruby
 default[:mapr][:install_spark] = "yes"
 ```
 
-#The below only matters if the above is 'standalone'
+The below only matters if the above is 'standalone'
 
 ```ruby
 default[:mapr][:spark_master] = "ip-172-16-9-225.ec2.internal"
@@ -52,6 +54,7 @@ Provided that the attributes from this cookbook and  mapr_installation are set, 
 
 Contributing
 ------------
+
 TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
 e.g.
