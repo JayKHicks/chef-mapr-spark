@@ -4,7 +4,7 @@ This cookbook installs the MapR Spark packages, and will integrate spark master 
 
 Requirements
 ------------
-This cookbook requires the mapr_installation cookbook, located at https://github.com/ericdward100/mapr_installation. 
+This cookbook requires the mapr_installation cookbook, located at https://github.com/GannettDigital/chef-mapr. 
 
 Additionally, this cookbook a running MapR cluster, and assumes that the user used the mapr_installation cookbook to install the MapR cluster, and uses attributes from this cookbook to configure Spark.  If a different method was utilized, this cookbook *may* work as long as the attributes from mapr_installation are correct.
 
