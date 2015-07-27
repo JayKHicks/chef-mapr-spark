@@ -11,16 +11,9 @@
 
 if node['mapr']['spark_type'] == 'yarn'
   print "\n\nStarting Spark Yarn deployment\n\n"
-  ruby_block 'install Scala' do
-    block do
-      # install scala
-      cmd = Mixlib::ShellOut.new('rpm -ivh http://www.scala-lang.org/files/archive/scala-2.10.4.rpm')
-      cmd.run_command
-      cmd.error!
-    end
-  end
 
   spark_home = ''
+  package 'http://www.scala-lang.org/files/archive/scala-2.10.4.rpm'
   package 'mapr-spark'
 
   ruby_block 'Is Spark installed' do
@@ -113,6 +106,7 @@ if node['mapr']['spark_type'] == 'yarn'
       end
     end
   end
+  print "\n\nFinished Spark Yarn deployment\n\n"
 else
   print "\n\nStarting Spark Standalone installation\n\n"
 

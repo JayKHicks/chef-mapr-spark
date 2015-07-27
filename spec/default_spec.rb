@@ -7,11 +7,11 @@ describe 'mapr_spark_installation::default' do
   let('chef_run') do
     ChefSpec::SoloRunner.new do |node|
     end.converge(described_recipe)
-  end  
-  
-  it 'install Scala' do
-    expect(chef_run).to run_ruby_block('install Scala')
   end
+  
+  it 'installs package mapr-spark' do
+    expect(chef_run).to install_package('http://www.scala-lang.org/files/archive/scala-2.10.4.rpm')
+  end  
   
   it 'installs package mapr-spark' do
     expect(chef_run).to install_package('mapr-spark')
