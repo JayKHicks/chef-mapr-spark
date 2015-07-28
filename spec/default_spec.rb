@@ -3,13 +3,13 @@ require 'chefspec'
 require 'spec_helper'
 require 'chefspec/berkshelf'
 
-describe 'mapr_spark_installation::default' do
+describe 'mapr_spark::default' do
   let('chef_run') do
     ChefSpec::SoloRunner.new do |node|
     end.converge(described_recipe)
   end
   
-  it 'installs package mapr-spark' do
+  it 'installs package scala' do
     expect(chef_run).to install_package('http://www.scala-lang.org/files/archive/scala-2.10.4.rpm')
   end  
   

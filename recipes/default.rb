@@ -13,7 +13,7 @@ if node['mapr']['spark_type'] == 'yarn'
   print "\n\nStarting Spark Yarn deployment\n\n"
 
   spark_home = ''
-  
+
   package 'http://www.scala-lang.org/files/archive/scala-2.10.4.rpm'
   package 'mapr-spark'
 
