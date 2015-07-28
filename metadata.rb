@@ -1,4 +1,4 @@
-name             'mapr_spark'
+name             'mapr-spark'
 maintainer       'Gannett'
 maintainer_email 'jhicks@gannett.com'
 license          'All rights reserved'

@@ -3,7 +3,7 @@ require 'chefspec'
 require 'spec_helper'
 require 'chefspec/berkshelf'
 
-describe 'mapr_spark::default' do
+describe 'mapr-spark::default' do
   let('chef_run') do
     ChefSpec::SoloRunner.new do |node|
     end.converge(described_recipe)

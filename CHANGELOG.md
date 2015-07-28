@@ -1,4 +1,4 @@
-mapr_sparkm_installation CHANGELOG
+mapr-spark CHANGELOG
 =====================================
 
 This file is used to list changes made in each version of the mapr_ecosystem_installation cookbook.
